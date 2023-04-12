@@ -1,0 +1,736 @@
+<html>
+<head>
+<title>B3.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #cc7832;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+B3.py</font>
+</center></td></tr></table>
+<pre><span class="s0"># x = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9]</span>
+<span class="s0"># print(5 in x)</span>
+<span class="s0">#</span>
+<span class="s0"># N = input(&quot;Введите целое число N: &quot;)</span>
+<span class="s0"># #print(N, type(N))</span>
+<span class="s0"># n_list = list(N)</span>
+<span class="s0"># #print(n_list, type(n_list))</span>
+<span class="s0"># n_numbers = map(int, n_list)</span>
+<span class="s0"># print(3 in n_numbers and 7 in n_numbers)</span>
+<span class="s0">#</span>
+<span class="s0"># N = input(&quot;Введите целое число N: &quot;)</span>
+<span class="s0"># print(int(N[0]) % 2 == 0)</span>
+<span class="s0">#</span>
+<span class="s0"># name = input(&quot;Введите название на этикетке: &quot;)</span>
+<span class="s0"># if name == &quot;Арорат&quot;:</span>
+<span class="s0">#     print(&quot;Нашлась подделка!&quot;)</span>
+<span class="s0"># else:</span>
+<span class="s0">#     print(&quot;Вино &quot;, name, &quot;не подделка&quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># if &quot;Арорат&quot; in name:</span>
+<span class="s0">#     print(&quot;Нашлась подделка!&quot;, name)</span>
+<span class="s0"># else:</span>
+<span class="s0">#     print(f&quot;Вино {name} не подделка&quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># cash = 2500</span>
+<span class="s0"># cost = int(input('Sneakers cost: '))</span>
+<span class="s0"># if cost &gt; cash:</span>
+<span class="s0">#     print(&quot;You CANT buy it!&quot;)</span>
+<span class="s0"># else:</span>
+<span class="s0">#     print(&quot;BUY THIS&quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># x = input(&quot;enter number: &quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># if x:</span>
+<span class="s0">#     x = int(x) * 2</span>
+<span class="s0">#     print(x)</span>
+<span class="s0"># else:</span>
+<span class="s0">#     x = None</span>
+<span class="s0"># #  x is None or int</span>
+<span class="s0">#</span>
+<span class="s0"># Реализуйте проверку, что x не None, а потом попробуйте передать разные варианты: -2, -1, 0, 1, 2</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># one = 12</span>
+<span class="s0"># two = 30</span>
+<span class="s0"># result = None</span>
+<span class="s0"># if one % 2 == 0 and two % 2 == 0:</span>
+<span class="s0">#     result = True</span>
+<span class="s0"># else:</span>
+<span class="s0">#     result = False</span>
+<span class="s0"># print(result)</span>
+<span class="s0">#</span>
+<span class="s0"># if 6 &lt;= hour &lt; 12:</span>
+<span class="s0">#     print(&quot;Утро!!!&quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># if x &gt; 0 and y &gt; 0</span>
+<span class="s0">#     print(&quot;1&quot;)</span>
+<span class="s0"># if x &lt; 0 and y &gt; 0</span>
+<span class="s0">#     print(&quot;2&quot;)</span>
+<span class="s0"># if x &lt; 0 and y &lt; 0</span>
+<span class="s0">#     print(&quot;3&quot;)</span>
+<span class="s0"># if x &gt; 0 and y &lt; 0</span>
+<span class="s0">#     print(&quot;4&quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># speed = int(input(&quot;speed? : &quot;))</span>
+<span class="s0"># if 1 &lt;= speed &lt;= 4:</span>
+<span class="s0">#     print(&quot;weak&quot;)</span>
+<span class="s0"># elif 5 &lt;= speed &lt;= 10:</span>
+<span class="s0">#     print(&quot;moderate&quot;)</span>
+<span class="s0"># elif 11 &lt;= speed &lt;= 18:</span>
+<span class="s0">#     print(&quot;strong&quot;)</span>
+<span class="s0"># elif speed &gt;= 19:</span>
+<span class="s0">#     print(&quot;hurricane&quot;)</span>
+<span class="s0"># elif speed &lt;= 0:</span>
+<span class="s0">#     print(&quot;Error&quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># A, B, C = int(input(&quot;Input&quot;)), int(input(&quot;Input2&quot;)), int(input(&quot;Input3&quot;))</span>
+<span class="s0"># result == &quot;good&quot; if (A &lt; 45 and B &gt;= 45 and C &gt;=45) or (B &lt; 45 and A &gt;= 45 and C &gt;=45) or (C &lt; 45 and B &gt;= 45 and A &gt;=45) else result == &quot;False&quot;</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># (-10 &lt;= A &lt;= -1) or (2 &lt;= A &lt;= 15)</span>
+<span class="s0">#</span>
+<span class="s0"># A = input(&quot;Enter number: &quot;)</span>
+<span class="s0"># A_back = A[::-1]</span>
+<span class="s0"># if A == A_back:</span>
+<span class="s0">#     print('A -- palindroumus')</span>
+<span class="s0"># else:</span>
+<span class="s0">#     print('A not a palindromus')</span>
+<span class="s0">#</span>
+<span class="s0"># ### Моё решение:</span>
+<span class="s0"># temperature = int(input(&quot;What temp? &quot;))</span>
+<span class="s0"># isRain = input('Есть осадки? (no, yes, heavy): ')</span>
+<span class="s0">#</span>
+<span class="s0"># if ( 20 &lt;= temperature &lt;= 30 ) and (isRain == &quot;yes&quot; or isRain == &quot;heavy&quot;):</span>
+<span class="s0">#     print(&quot;Футболку, шорты, дождевик&quot;)</span>
+<span class="s0"># elif ( 20 &lt;= temperature &lt;= 30 ) and isRain == &quot;no&quot;:</span>
+<span class="s0">#     print('футболку и шорты')</span>
+<span class="s0">#</span>
+<span class="s0"># else:</span>
+<span class="s0">#     if temperature &gt;= 0 and isRain == 'yes':</span>
+<span class="s0">#         print(&quot;Пальто и дождевик&quot;)</span>
+<span class="s0">#     elif temperature &gt;= 0 and isRain == 'heavy':</span>
+<span class="s0">#         print(&quot;Пальто, резиновые сапоги и зонт&quot;)</span>
+<span class="s0">#     elif temperature &gt;= 0 and isRain == 'no':</span>
+<span class="s0">#         print(&quot;Пальто&quot;)</span>
+<span class="s0">#     elif temperature &lt; 0 :</span>
+<span class="s0">#         print('Пуховик')</span>
+<span class="s0">#</span>
+<span class="s0"># #### Решение СФ</span>
+<span class="s0"># #Запрашиваем ввод температуры</span>
+<span class="s0"># temperature = int(input(&quot;Input temperature: &quot;))</span>
+<span class="s0">#</span>
+<span class="s0"># #для указания начальных статусов дождливости воспользуемся False или None</span>
+<span class="s0"># rainy = None</span>
+<span class="s0"># heavyRain = None</span>
+<span class="s0">#</span>
+<span class="s0"># #если температура &lt;0 то про дождь спрашивать бессмысленно</span>
+<span class="s0"># if temperature &gt; 0:</span>
+<span class="s0">#    rainy = input(&quot;Is rainy: &quot;) == &quot;yes&quot;</span>
+<span class="s0"># #если идет дождь спросим насколько он серьезный</span>
+<span class="s0">#    if rainy:</span>
+<span class="s0">#        heavyRain = input(&quot;Is heavy rain: &quot;) == &quot;yes&quot;</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># #реализуем логику по схеме</span>
+<span class="s0"># decision = &quot;Не решил что брать. Останусь дома.&quot;</span>
+<span class="s0"># if (temperature) &gt; 20 and (temperature &lt; 30) :</span>
+<span class="s0">#    if rainy:</span>
+<span class="s0">#        decision = &quot;Взять футболку шорты и дождевик&quot;</span>
+<span class="s0">#    else:</span>
+<span class="s0">#        decision = &quot;Взять футболку и шорты&quot;</span>
+<span class="s0"># elif temperature &gt; 0:</span>
+<span class="s0">#    if rainy:</span>
+<span class="s0">#        if heavyRain:</span>
+<span class="s0">#            decision = &quot;Взять пальто, резиновые сапоги и зонт&quot;</span>
+<span class="s0">#        else:</span>
+<span class="s0">#            decision = &quot;Взять пальто и дождевик&quot;</span>
+<span class="s0">#    else:</span>
+<span class="s0">#        decision = &quot;Взять пальто&quot;</span>
+<span class="s0"># else:</span>
+<span class="s0">#    decision = &quot;Взять пуховик&quot;</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># #Выведем наше решение на экран</span>
+<span class="s0"># print(decision)</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># S = 0  # это наша переменная-счетчик, в которой мы будем считать сумму чисел</span>
+<span class="s0"># n = 1  # текущее натуральное число, с которого начинаем складывать натуральные числа</span>
+<span class="s0">#</span>
+<span class="s0"># # заводим цикл while, который будет работать пока сумма не превысит 500</span>
+<span class="s0"># while S &lt; 500:  # делай пока ...</span>
+<span class="s0">#     S += n  # увеличиваем сумму, равносильно S = S + n</span>
+<span class="s0">#     n += 1  # так как сумма ещё не достигла нужного значения, то увеличиваем переменную счетчик</span>
+<span class="s0">#     print(&quot;Ещё считаю ...&quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># print(&quot;Сумма равна: &quot;, S)</span>
+<span class="s0"># print(&quot;Количество чисел: &quot;, n-1)</span>
+<span class="s0">#####################################################3.6.1 МОЁ РЕШЕНИЕ</span>
+<span class="s0"># import math</span>
+<span class="s0"># S = 0</span>
+<span class="s0"># n = 1</span>
+<span class="s0"># while S &lt; math.sqrt(1000):</span>
+<span class="s0">#     S = S+1 #1</span>
+<span class="s0">#</span>
+<span class="s0">#     print('calculating...', n, S)</span>
+<span class="s0"># print('Exiting cycle with n =', S)</span>
+<span class="s0"># print('Max n**2 &lt; 1000 =', S-1)</span>
+<span class="s0"># #</span>
+<span class="s0">#</span>
+<span class="s0"># #Ответ авторов:</span>
+<span class="s0"># n = 1</span>
+<span class="s0"># while n**2 &lt; 1000:</span>
+<span class="s0">#     n += 1</span>
+<span class="s0"># print(&quot;Искомое число&quot;, n - 1)</span>
+<span class="s0">#</span>
+<span class="s0"># # плохо</span>
+<span class="s0"># n = 1</span>
+<span class="s0"># while n &lt; 10:  # в данной программе это условие всегда True, потому что мы внутри цикла не меняем значение переменной n, поэтому наш цикл будет бесконечным</span>
+<span class="s0">#     print(&quot;Hello World&quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># # хорошо</span>
+<span class="s0"># n = 1</span>
+<span class="s0"># while True:  # в данной программе это условие всегда True, цикл будет бесконечным</span>
+<span class="s0">#    print(&quot;Hello World&quot;)</span>
+<span class="s0">#    n += 1</span>
+<span class="s0">#    if n &gt; 10:  # условие, при достижении которого цикл while будет принудительно завершен</span>
+<span class="s0">#        break</span>
+<span class="s0">#</span>
+<span class="s0"># n = 10</span>
+<span class="s0"># i = 1</span>
+<span class="s0"># while i ** 2 &lt; n:</span>
+<span class="s0">#     i += 1</span>
+<span class="s0"># print(i)</span>
+<span class="s0">#</span>
+<span class="s0"># i = 0</span>
+<span class="s0"># n = 0</span>
+<span class="s0"># while 2**n &lt; 1000:</span>
+<span class="s0">#     n = n + 1</span>
+<span class="s0"># print(i, n, 2**n)</span>
+
+<span class="s0"># n = 1</span>
+<span class="s0"># while n**2 &lt; 1000:</span>
+<span class="s0">#     n += 1</span>
+<span class="s0"># print(&quot;Искомое число&quot;, n - 1)</span>
+
+
+<span class="s0">#</span>
+<span class="s0"># # первоначальное значение счетчика</span>
+<span class="s0"># count = 0</span>
+<span class="s0"># # начальное значение числа 1</span>
+<span class="s0"># num = 1</span>
+<span class="s0"># #пока степень двойки меньше 10000</span>
+<span class="s0"># while num &lt; 10000:</span>
+<span class="s0">#   #вычисляем следующую степень двойки</span>
+<span class="s0">#   num = num*2</span>
+<span class="s0">#   #увеличивает счетчик на 1</span>
+<span class="s0">#   count += 1</span>
+<span class="s0"># #печатаем результаты</span>
+<span class="s0"># print(count)</span>
+<span class="s0"># print(num)</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># y = 0</span>
+<span class="s0"># m = 1000</span>
+<span class="s0"># while m &lt;= 3000:</span>
+<span class="s0">#     m = m+0.08*m</span>
+<span class="s0">#     y+=1</span>
+<span class="s0"># print(m, y)</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># #1</span>
+<span class="s0"># employee = 5</span>
+<span class="s0"># #2</span>
+<span class="s0"># i = 1</span>
+<span class="s0"># #3</span>
+<span class="s0"># while i &lt; employee:</span>
+<span class="s0">#</span>
+<span class="s0">#     if i &gt; 1:</span>
+<span class="s0">#</span>
+<span class="s0">#         print('There are', i, 'people in the department') # В отделе i человек</span>
+<span class="s0"># #6</span>
+<span class="s0">#     if i == 1:</span>
+<span class="s0">#</span>
+<span class="s0">#         print('There are', i, 'people in the department') # В отделе i человек</span>
+<span class="s0">#     i = i+1</span>
+<span class="s0">#</span>
+<span class="s0"># S = 0  # заводим переменную счетчик, в которой мы будем считать сумму</span>
+<span class="s0"># N = 5</span>
+<span class="s0">#</span>
+<span class="s0"># # заводим цикл for в котором мы будем проходить по всем числам от одного до N</span>
+<span class="s0"># for i in range(1, N + 1):  # равносильно выражению for i in [1, 2, 3, ... , N -1, N]:</span>
+<span class="s0">#     print(&quot;Значение суммы на предыдущем шаге: &quot;, S)</span>
+<span class="s0">#     print(&quot;Текущее число: &quot;, i)</span>
+<span class="s0">#     S = S + i  # cуммируем текущее число i и перезаписываем значение суммы</span>
+<span class="s0">#     print(&quot;Значение суммы после сложения: &quot;, S)</span>
+<span class="s0">#     print(&quot;---&quot;)</span>
+<span class="s0"># print(&quot;Конец цикла&quot;)</span>
+<span class="s0"># print()</span>
+<span class="s0"># print(&quot;Ответ: сумма равна = &quot;, S)</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0">#№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№         3,7,2</span>
+
+<span class="s0"># Попробуйте теперь самостоятельно подсчитать произведение всех чисел от 1 до N включительно.</span>
+<span class="s0">#</span>
+<span class="s0"># P = 1  # создаём переменную-счётчик, в которой мы будем считать произведение.</span>
+<span class="s0"># #подумайте, чему она должна быть равна</span>
+<span class="s0"># N = 5</span>
+<span class="s0"># # запишите цикл for для подсчёта произведения</span>
+<span class="s0"># for N in range(1, 6):</span>
+<span class="s0">#     P=P*N</span>
+<span class="s0">#     print(P)</span>
+
+<span class="s0">#Задание 3.7.2. Самопроверка</span>
+
+<span class="s0"># P = 1  # заводим переменную счетчик, в которой мы будем считать произведение</span>
+<span class="s0"># N = 5</span>
+<span class="s0"># # запишите цикл for для подсчета произведения с правильным диапазоном</span>
+<span class="s0"># for i in range(1, N+1):</span>
+<span class="s0">#     P *= i</span>
+<span class="s0"># print(P)</span>
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="s0">###########################################3.7.3</span>
+<span class="s0"># Напишите программу, которая будет печатать лесенку следующего типа:</span>
+<span class="s0">#</span>
+<span class="s0"># n = 3</span>
+<span class="s0"># *</span>
+<span class="s0"># **</span>
+<span class="s0"># ***</span>
+<span class="s0">#</span>
+<span class="s0"># n = 4</span>
+<span class="s0"># *</span>
+<span class="s0"># **</span>
+<span class="s0"># ***</span>
+<span class="s0"># ****</span>
+<span class="s0">#</span>
+<span class="s0"># n = 4</span>
+<span class="s0"># s = &quot;*&quot;</span>
+<span class="s0"># for n in range(0, n+1):</span>
+<span class="s0">#     s = &quot;*&quot;*n</span>
+<span class="s0">#     print(s)</span>
+<span class="s0">#</span>
+<span class="s0">#Задание 3.7.3. Самопроверка</span>
+<span class="s0"># N = 4</span>
+<span class="s0"># for i in range(1, N + 1):</span>
+<span class="s0">#    print(&quot;*&quot; * i)</span>
+
+
+
+<span class="s0">#</span>
+<span class="s0"># matrix = [</span>
+<span class="s0">#     [1, 2]</span>
+<span class="s0">#    ,[3, 4]</span>
+<span class="s0">#    ,[5, 6]</span>
+<span class="s0"># ]</span>
+<span class="s0">#</span>
+<span class="s0"># for row in matrix:</span>
+<span class="s0">#    for element in row:</span>
+<span class="s0">#        print(element, end = &quot; &quot;)</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># matrix = [</span>
+<span class="s0">#     [1, 2]</span>
+<span class="s0">#    ,[3, 4]</span>
+<span class="s0">#    ,[5, 6]</span>
+<span class="s0"># ]</span>
+<span class="s0">#</span>
+<span class="s0"># for row in matrix:</span>
+<span class="s0">#    for element in row:</span>
+<span class="s0">#        print(element, end = &quot; &quot;)</span>
+<span class="s0">#    print() # этот принт относится к циклу for row in matrix:</span>
+<span class="s0">#</span>
+<span class="s0"># ROWS = 3</span>
+<span class="s0"># COLS = 2</span>
+<span class="s0">#</span>
+<span class="s0"># matrix = [</span>
+<span class="s0">#     [1, 2]</span>
+<span class="s0">#    ,[3, 4]</span>
+<span class="s0">#    ,[5, 6]</span>
+<span class="s0"># ]</span>
+<span class="s0">#</span>
+<span class="s0"># for i in range(ROWS):</span>
+<span class="s0">#    for j in range(COLS):</span>
+<span class="s0">#        print(matrix[i][j], end = &quot; &quot;)</span>
+<span class="s0">#    print()</span>
+<span class="s0">#</span>
+<span class="s0"># random_matrix = [</span>
+<span class="s0">#    [9, 2, 1],</span>
+<span class="s0">#    [2, 5, 3],</span>
+<span class="s0">#    [4, 8, 5]</span>
+<span class="s0"># ]</span>
+<span class="s0"># min_value_rows = []</span>
+<span class="s0"># min_index_rows = []</span>
+<span class="s0"># max_value_rows = []</span>
+<span class="s0"># max_index_rows = []</span>
+<span class="s0"># for row in random_matrix:</span>
+<span class="s0">#     min_index = 0</span>
+<span class="s0">#     min_value = row[min_index]</span>
+<span class="s0">#     max_index = 0</span>
+<span class="s0">#     max_value = row[max_index]</span>
+<span class="s0">#     for index_col in range(len(row)):</span>
+<span class="s0">#         if row[index_col] &lt; min_value:</span>
+<span class="s0">#             min_value = row[index_col]</span>
+<span class="s0">#             min_index = index_col</span>
+<span class="s0">#         if row[index_col] &gt; max_value:</span>
+<span class="s0">#             max_value = row[index_col]</span>
+<span class="s0">#             max_index = index_col</span>
+<span class="s0">#     min_value_rows.append(min_value)</span>
+<span class="s0">#     min_index_rows.append(min_index)</span>
+<span class="s0">#     max_value_rows.append(max_value)</span>
+<span class="s0">#     max_index_rows.append(max_index)</span>
+<span class="s0"># print(&quot;Minimal elements:&quot;, min_value_rows) # минимальные элементы</span>
+<span class="s0"># print(&quot;Their indices:&quot;, min_index_rows) # их индексы</span>
+<span class="s0"># print(&quot;Maximal elements:&quot;, max_value_rows) # максимальные элементы</span>
+<span class="s0"># print(&quot;Their indices:&quot;, max_index_rows) # их индексы</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0">###################################################################################3/8/1</span>
+<span class="s0"># test_matrix = [[1, 2, 3],</span>
+<span class="s0">#                [7, -1, 2],</span>
+<span class="s0">#                [123, 2, -1]]</span>
+<span class="s0"># max_value_row = []</span>
+<span class="s0"># max_value_id = []</span>
+<span class="s0"># for row in test_matrix:</span>
+<span class="s0">#     max_ind = 0</span>
+<span class="s0">#     max_value = row[max_ind]</span>
+<span class="s0">#     for ind_col in range(len(row)):</span>
+<span class="s0">#         if row[ind_col] &gt; max_value:</span>
+<span class="s0">#             max_value = row[ind_col]</span>
+<span class="s0">#             max_ind = ind_col</span>
+<span class="s0">#     max_value_row.append(max_value)</span>
+<span class="s0">#     max_value_id.append(max_ind)</span>
+<span class="s0"># print('max value in row:', max_value_row)</span>
+<span class="s0"># print('max ID: ', max_value_id)</span>
+<span class="s0"># max_val_all = max(max_value_row)</span>
+<span class="s0"># print(max_val_all)</span>
+
+<span class="s0">#Задание 3.8.1. Самопроверка</span>
+<span class="s0"># test_matrix = [[1, 2, 3],</span>
+<span class="s0">#               [7, -1, 2],</span>
+<span class="s0">#               [123, 2, -1]]</span>
+<span class="s0">#</span>
+<span class="s0"># max = test_matrix[0][0] # берем в качестве точки отсчета любой элемент из матрицы</span>
+<span class="s0"># for row in test_matrix:</span>
+<span class="s0">#    for el in row:</span>
+<span class="s0">#        # если элемент больше максимального, то это новый максимум</span>
+<span class="s0">#        if el &gt; max:</span>
+<span class="s0">#            max = el</span>
+<span class="s0"># print(max)</span>
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="s0">#</span>
+<span class="s0"># test_matrix = [[1, 2, 3],</span>
+<span class="s0">#               [7, -1],</span>
+<span class="s0">#                ]</span>
+<span class="s0">#</span>
+<span class="s0"># if len(test_matrix) == len(test_matrix[0]):</span>
+<span class="s0">#     print('true')</span>
+<span class="s0"># else:</span>
+<span class="s0">#     print('False')</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># list_ = [-5, 2, 4, 8, 12, -7, 5]</span>
+<span class="s0"># # Функция enumerate возвращает данные в виде кортежей,</span>
+<span class="s0"># # где на первом месте стоит индекс, а затем значение</span>
+<span class="s0"># # [(0, -5), (1, 2), (2, 4), ...]</span>
+<span class="s0"># for i, value in enumerate(list_):</span>
+<span class="s0">#     print(&quot;Индекс элемента: &quot;, i)</span>
+<span class="s0">#     print(&quot;Значение элемента: &quot;, value)  # с помощью индекса получаем значение элемента</span>
+<span class="s0">#     print(&quot;---&quot;)</span>
+<span class="s0"># print(&quot;Конец цикла&quot;)</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># list_ = [-5, 2, 4, 8, 12, -7, 5]</span>
+<span class="s0"># # Объявим переменную, в которой будем хранить индекс отрицательного элемента</span>
+<span class="s0"># index_negative = None</span>
+<span class="s0">#</span>
+<span class="s0"># for i, value in enumerate(list_):</span>
+<span class="s0">#     if value &lt; 0:</span>
+<span class="s0">#         print(&quot;Отрицательное число: &quot;, value)</span>
+<span class="s0">#         index_negative = i  # перезаписываем значение индекса</span>
+<span class="s0">#         print(&quot;Новый индекс отрицательного числа: &quot;, index_negative)</span>
+<span class="s0">#     else:</span>
+<span class="s0">#         print(&quot;Положительное число: &quot;, value)</span>
+<span class="s0">#     print(&quot;---&quot;)</span>
+<span class="s0"># print(&quot;Конец цикла&quot;)</span>
+<span class="s0"># print()</span>
+<span class="s0"># print(&quot;Ответ: индекс последнего отрицательного элемента = &quot;, index_negative)</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># text = &quot;&quot;&quot;</span>
+<span class="s0"># У лукоморья дуб зелёный;</span>
+<span class="s0"># Златая цепь на дубе том:</span>
+<span class="s0"># И днём и ночью кот учёный</span>
+<span class="s0"># Всё ходит по цепи кругом;</span>
+<span class="s0"># Идёт направо -- песнь заводит,</span>
+<span class="s0"># Налево -- сказку говорит.</span>
+<span class="s0"># Там чудеса: там леший бродит,</span>
+<span class="s0"># Русалка на ветвях сидит;</span>
+<span class="s0"># Там на неведомых дорожках</span>
+<span class="s0"># Следы невиданных зверей;</span>
+<span class="s0"># Избушка там на курьих ножках</span>
+<span class="s0"># Стоит без окон, без дверей;</span>
+<span class="s0"># Там лес и дол видений полны;</span>
+<span class="s0"># Там о заре прихлынут волны</span>
+<span class="s0"># На брег песчаный и пустой,</span>
+<span class="s0"># И тридцать витязей прекрасных</span>
+<span class="s0"># Чредой из вод выходят ясных,</span>
+<span class="s0"># И с ними дядька их морской;</span>
+<span class="s0"># Там королевич мимоходом</span>
+<span class="s0"># Пленяет грозного царя;</span>
+<span class="s0"># Там в облаках перед народом</span>
+<span class="s0"># Через леса, через моря</span>
+<span class="s0"># Колдун несёт богатыря;</span>
+<span class="s0"># В темнице там царевна тужит,</span>
+<span class="s0"># А бурый волк ей верно служит;</span>
+<span class="s0"># Там ступа с Бабою Ягой</span>
+<span class="s0"># Идёт, бредёт сама собой,</span>
+<span class="s0"># Там царь Кащей над златом чахнет;</span>
+<span class="s0"># Там русский дух... там Русью пахнет!</span>
+<span class="s0"># И там я был, и мёд я пил;</span>
+<span class="s0"># У моря видел дуб зелёный;</span>
+<span class="s0"># Под ним сидел, и кот учёный</span>
+<span class="s0"># Свои мне сказки говорил.</span>
+<span class="s0"># &quot;&quot;&quot;</span>
+<span class="s0">#</span>
+<span class="s0"># text = text.replace('\n', &quot; &quot;)</span>
+<span class="s0"># text2 = text.split()</span>
+<span class="s0"># # print(text2)</span>
+<span class="s0"># print(len(text2)-1)</span>
+<span class="s0"># #158</span>
+<span class="s0">#</span>
+<span class="s0"># n = 27</span>
+<span class="s0"># while True:</span>
+<span class="s0">#     if n % 3 == 0:</span>
+<span class="s0">#          n = n // 3</span>
+<span class="s0">#          if n == 1:</span>
+<span class="s0">#            break</span>
+<span class="s0">#     else:</span>
+<span class="s0">#          break</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># heads = 35  # количество голов</span>
+<span class="s0"># legs = 94  # количество ног</span>
+<span class="s0">#</span>
+<span class="s0"># for r in range(heads + 1):  # количество кроликов</span>
+<span class="s0">#     for ph in range(heads + 1):  # количество фазанов</span>
+<span class="s0">#         #  если суммарное количество голов превышено или ног превышено, то переходим на следующий шаг цикла</span>
+<span class="s0">#         if (r + ph) &gt; heads or \</span>
+<span class="s0">#             (r * 4 + ph * 2) &gt; legs:</span>
+<span class="s0">#             continue</span>
+<span class="s0">#         if (r + ph) == heads and (r * 4 + ph * 2) == legs:</span>
+<span class="s0">#             print(&quot;Количество кроликов&quot;, r)</span>
+<span class="s0">#             print(&quot;Количество фазанов&quot;, ph)</span>
+<span class="s0">#             print(&quot;---&quot;)</span>
+<span class="s0">#</span>
+<span class="s0"># #1</span>
+<span class="s0"># list_ = [1,2,3,-1,3,2,1,2,3,2,1,0,0,0,-1,2]</span>
+<span class="s0"># #2</span>
+<span class="s0"># negate_index = -1</span>
+<span class="s0"># #3</span>
+<span class="s0"># negate_value = 0</span>
+<span class="s0"># #4</span>
+<span class="s0"># for i, val in enumerate(list_):</span>
+<span class="s0"># #5</span>
+<span class="s0">#    if val &lt; 0:</span>
+<span class="s0">#        #6</span>
+<span class="s0">#        negate_index = i</span>
+<span class="s0">#        #7</span>
+<span class="s0">#        negate_value = val</span>
+<span class="s0">#        break</span>
+<span class="s0"># #9</span>
+<span class="s0"># print(f'{negate_index}: {negate_value}')</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0"># numbers = [2,8,22,88,21,16,18,12,0,77,12,32,43,54,12]</span>
+<span class="s0"># answ = []</span>
+<span class="s0"># for i in numbers:</span>
+<span class="s0">#     if i == 0:</span>
+<span class="s0">#         print('нельзя произвести вычисление')</span>
+<span class="s0">#         break</span>
+<span class="s0">#     if i != 0:</span>
+<span class="s0">#         x = 1/i</span>
+<span class="s0">#         answ.append(x)</span>
+<span class="s0"># print(answ)</span>
+<span class="s0">#</span>
+<span class="s0"># out = []</span>
+<span class="s0"># numbers = [2,8,22,88,21,16,18,12,0,77,12,32,43,54,12]</span>
+<span class="s0"># for number  in numbers:</span>
+<span class="s0">#    if number == 0:</span>
+<span class="s0">#        out.clear()</span>
+<span class="s0">#        break</span>
+<span class="s0">#</span>
+<span class="s0">#    out.append(1/number)</span>
+<span class="s0">#</span>
+<span class="s0"># if out:</span>
+<span class="s0">#    print(out)</span>
+<span class="s0"># else:</span>
+<span class="s0">#    print('Невозможно выполнить вычисление')</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+<span class="s1">num = </span><span class="s2">5555777999345678991257</span>
+<span class="s1">i = </span><span class="s2">0</span>
+<span class="s3">while </span><span class="s1">num &gt; </span><span class="s2">1</span><span class="s1">:</span>
+    <span class="s3">if </span><span class="s1">num % </span><span class="s2">10 </span><span class="s1">== </span><span class="s2">5 </span><span class="s3">or </span><span class="s1">num % </span><span class="s2">10 </span><span class="s1">== </span><span class="s2">7 </span><span class="s3">or </span><span class="s1">num % </span><span class="s2">10 </span><span class="s1">== </span><span class="s2">9</span><span class="s1">:</span>
+        <span class="s1">num = num//</span><span class="s2">10</span>
+        <span class="s1">i = i+</span><span class="s2">1</span>
+        <span class="s1">print(</span><span class="s4">'Есть 5, 7 или 9, проверяем'</span><span class="s3">, </span><span class="s1">num)</span>
+    <span class="s3">else</span><span class="s1">:</span>
+        <span class="s1">num = num//</span><span class="s2">10</span>
+<span class="s1">print(</span><span class="s4">'количество успешных итераций: '</span><span class="s3">, </span><span class="s1">i)</span>
+<span class="s0">#</span>
+
+
+<span class="s0">#Recursion:</span>
+
+<span class="s0"># def rec(x):</span>
+<span class="s0">#     if x &lt; 4:</span>
+<span class="s0">#         print(x)</span>
+<span class="s0">#         rec(x+1)</span>
+<span class="s0">#         print(x)</span>
+<span class="s0"># rec(1)</span>
+
+<span class="s0">#факториал</span>
+
+<span class="s0"># def fact(x):</span>
+<span class="s0">#     if x == 1:</span>
+<span class="s0">#         return 1</span>
+<span class="s0">#     return fact(x-1)*x</span>
+<span class="s0"># print(fact(4))</span>
+
+
+
+<span class="s0">#четность числа с помощзью рекурсии</span>
+<span class="s0"># def check(n):</span>
+<span class="s0">#     if (n) &lt; 2:</span>
+<span class="s0">#         return (n % 2 == 0)</span>
+<span class="s0">#     return check(n-2)</span>
+<span class="s0"># n = int(input(&quot;Input numb: &quot;))</span>
+<span class="s0"># if (check(n) == True):</span>
+<span class="s0">#     print('odd number')</span>
+<span class="s0"># else:</span>
+<span class="s0">#     print('не четное')</span>
+<span class="s0">#</span>
+<span class="s0">#</span>
+
+<span class="s0"># # генератор списка list comprehension</span>
+<span class="s0"># a = [i**2 for i in range(1, 6)]</span>
+<span class="s0"># print(a)</span>
+<span class="s0">#</span>
+
+<span class="s0"># # выражение генераторы</span>
+<span class="s0"># a = (i**2 for i in range(1, 6))</span>
+<span class="s0"># print(a)</span>
+
+<span class="s0"># yield = return</span>
+<span class="s0"># def cube_number(nums):</span>
+<span class="s0">#     cube_list = []</span>
+<span class="s0">#     for i in nums:</span>
+<span class="s0">#         cube_list.append(i**3)</span>
+<span class="s0">#     return cube_list</span>
+<span class="s0">#</span>
+<span class="s0"># print(cube_number([1, 2, 3, 4, 5]))</span>
+
+<span class="s0"># def cube_number(nums):</span>
+<span class="s0">#     for i in nums:</span>
+<span class="s0">#         yield (i**3)</span>
+<span class="s0">#</span>
+<span class="s0"># cube = cube_number([1, 2, 3, 4, 5])</span>
+<span class="s0"># print(next(cube))</span>
+<span class="s0"># print(next(cube))</span>
+<span class="s0"># print(next(cube))</span>
+
+
+<span class="s0"># Декоратор первый способ обёртки</span>
+<span class="s0"># def my_decor(func):</span>
+<span class="s0">#     def wrapper():</span>
+<span class="s0">#         print('start')</span>
+<span class="s0">#         func()</span>
+<span class="s0">#         print('end')</span>
+<span class="s0">#     return wrapper #значение, а не функция, без скобочек</span>
+<span class="s0"># def my_func():</span>
+<span class="s0">#     print('тут основная функция')</span>
+<span class="s0">#</span>
+<span class="s0"># my = my_decor(my_func)</span>
+<span class="s0"># my()</span>
+
+<span class="s0"># ВТорой способ обертки</span>
+<span class="s0"># def my_decor(func):</span>
+<span class="s0">#     def wrapper(n):</span>
+<span class="s0">#         print('start')</span>
+<span class="s0">#         func(n)</span>
+<span class="s0">#         print('end')</span>
+<span class="s0">#     return wrapper #значение, а не функция, без скобочек</span>
+<span class="s0"># @my_decor</span>
+<span class="s0"># def my_func(number):</span>
+<span class="s0">#     print(number**2)</span>
+<span class="s0"># my_func(10)</span>
+
+<span class="s0"># def my_decor(func):</span>
+<span class="s0">#     def wrapper(n):</span>
+<span class="s0">#         print('start')</span>
+<span class="s0">#         func(n)</span>
+<span class="s0">#         print('end')</span>
+<span class="s0">#     return wrapper              #значение, а не функция, без скобочек</span>
+<span class="s0"># @my_decor</span>
+<span class="s0"># def my_func(number):</span>
+<span class="s0">#     print(number**2)</span>
+<span class="s0"># my_func(10)</span>
+
+<span class="s0">##### Неубывающий массив с заменой макс. одного элемента</span>
+<span class="s0"># class Solution(object):</span>
+<span class="s0">#    def checkPossibility(self, nums):</span>
+<span class="s0">#       if len(nums) &lt;=2:</span>
+<span class="s0">#          return True</span>
+<span class="s0">#       ans = False</span>
+<span class="s0">#       for i in range(len(nums)-1):</span>
+<span class="s0">#          if nums[i] &gt; nums[i+1]:</span>
+<span class="s0">#             if ans:</span>
+<span class="s0">#                return False</span>
+<span class="s0">#             else:</span>
+<span class="s0">#                ans = True</span>
+<span class="s0">#             if i&gt;0:</span>
+<span class="s0">#                if nums[i-1] &gt; nums[i+1]:</span>
+<span class="s0">#                    nums[i+1] = nums[i]</span>
+<span class="s0">#       return True</span>
+<span class="s0"># ob1 = Solution()</span>
+<span class="s0"># print(ob1.checkPossibility([7,7,1]))</span></pre>
+</body>
+</html>
